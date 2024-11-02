@@ -48,5 +48,5 @@ jobs:
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
         run: |
-          railway up --service "imageservice"
+          railway up --service "image_upload_service"
       
