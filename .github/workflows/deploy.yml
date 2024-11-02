@@ -31,9 +31,9 @@ jobs:
         run: |
           docker-compose -f docker-compose.yml build
           # Tag each service with the Docker Hub repository name
-          docker tag image_upload_service:latest ${{ secrets.DOCKER_USERNAME }}/image_upload_service:latest
-          docker tag ml_classification_service:latest ${{ secrets.DOCKER_USERNAME }}/ml_classification_service:latest
-          docker tag notification_service:latest ${{ secrets.DOCKER_USERNAME }}/notification_service:latest
+          docker tag image_upload_service:latest ${{ secrets.DOCKER_USERNAME }}/image_upload:latest
+          docker tag ml_classification_service:latest ${{ secrets.DOCKER_USERNAME }}/ml_classification:latest
+          docker tag notification_service:latest ${{ secrets.DOCKER_USERNAME }}/notification:latest
 
       - name: Push Docker Images to Docker Hub
         run: |
