@@ -1,12 +1,12 @@
 services:
-  image_upload:
+  imageservice:
     build:
       context: ./image_upload_service
       dockerfile: Dockerfile
     ports:
       - "5001:5001"
 
-  ml_classification:
+  mlservice:
     build:
       context: ./ml_classification_service
       dockerfile: Dockerfile
@@ -15,7 +15,7 @@ services:
     depends_on:
       - image_upload
 
-  notification:
+  notificationservice:
     build:
       context: ./notification_service
       dockerfile: Dockerfile
