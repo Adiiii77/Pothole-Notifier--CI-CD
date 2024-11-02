@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "build": {
+    "dockerfile": "docker-compose.yml"
+  },
+  "services": {
+    "image_upload": {
+      "build": {
+        "context": "image_upload_service"
+      },
+      "env": {
+        "FLASK_ENV": "production"
+      }
+    },
+    "ml_classification": {
+      "build": {
+        "context": "ml_classification_service"
+      },
+      "env": {
+        "FLASK_ENV": "production"
+      }
+    },
+    "notification": {
+      "build": {
+        "context": "notification_service"
+      },
+      "env": {
+        "FLASK_ENV": "production"
+      }
+    }
+  }
+}

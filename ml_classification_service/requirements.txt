@@ -1,0 +1,8 @@
+Flask
+flask-cors
+tensorflow  # Or any other ML library you are using
+keras
+numpy
+scikit-learn==1.2.2
+opencv-python
+imutils
