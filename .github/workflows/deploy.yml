@@ -29,8 +29,15 @@ jobs:
           docker-compose -f docker-compose.yml build
           docker-compose -f docker-compose.yml push
           
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'  
+
+      - name: Install Railway CLI
+        run: |
+          npm install -g railway
+
       - name: Deploy to Railway
         run: |
-          curl -sL https://railway.app/deploy -o railway-deploy.sh
-          chmod +x railway-deploy.sh
-          ./railway-deploy.sh
+          railway up
