@@ -1,19 +1,19 @@
 {
   "services": [
     {
-      "name": "Image Upload Service",
+      "name": "Image_Upload_Service",
       "dockerfile": "image_upload_service/Dockerfile",
       "context": "image_upload_service",
       "port": 5000
     },
     {
-      "name": "ML Classification Service",
+      "name": "ML_Classification_Service",
       "dockerfile": "ml_classification_service/Dockerfile",
       "context": "ml_classification_service",
       "port": 5001
     },
     {
-      "name": "Notification Service",
+      "name": "Notification_Service",
       "dockerfile": "notification_service/Dockerfile",
       "context": "notification_service",
       "port": 5002
