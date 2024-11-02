@@ -29,12 +29,8 @@ jobs:
           docker-compose -f docker-compose.yml build
           docker-compose -f docker-compose.yml push
           
-      - name: Install Railway CLI
-        run: |
-          curl -sSL https://cli.railway.app/install.sh -o railway_install.sh
-          chmod +x railway_install.sh
-          ./railway_install.sh
-          
       - name: Deploy to Railway
         run: |
-          railway up
+          curl -sL https://railway.app/deploy -o railway-deploy.sh
+          chmod +x railway-deploy.sh
+          ./railway-deploy.sh
