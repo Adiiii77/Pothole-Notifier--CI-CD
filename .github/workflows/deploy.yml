@@ -37,9 +37,9 @@ jobs:
 
       - name: Push Docker Images to Docker Hub
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/image_upload_service:latest
-          docker push ${{ secrets.DOCKER_USERNAME }}/ml_classification_service:latest
-          docker push ${{ secrets.DOCKER_USERNAME }}/notification_service:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/image_upload:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/ml_classification:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/notification:latest
 
 
 
