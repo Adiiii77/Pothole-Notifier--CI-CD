@@ -41,5 +41,5 @@ jobs:
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}  
         run: |
-          railway up --token $RAILWAY_TOKEN
+          railway up
       
