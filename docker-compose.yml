@@ -13,7 +13,7 @@ services:
     ports:
       - "5002:5002"
     depends_on:
-      - image_upload
+      - imageservice
 
   notificationservice:
     build:
@@ -22,4 +22,4 @@ services:
     ports:
       - "5003:5003"
     depends_on:
-      - ml_classification
+      - mlservice
