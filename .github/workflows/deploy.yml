@@ -29,17 +29,17 @@ jobs:
           docker-compose -f docker-compose.yml build
           docker-compose -f docker-compose.yml push
           
-      - name: Install Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'  
+      # - name: Install Node.js
+      #   uses: actions/setup-node@v2
+      #   with:
+      #     node-version: '16'  
 
-      - name: Install Railway CLI
-        run: |
-          npm install -g @railway/cli
-      - name: Deploy to Railway
-        env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}  
-        run: |
-          railway up --service "Image_Upload_Service"
+      # - name: Install Railway CLI
+      #   run: |
+      #     npm install -g @railway/cli
+      # - name: Deploy to Railway
+      #   env:
+      #     RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}  
+      #   run: |
+      #     railway up --service "Image_Upload_Service"
       
