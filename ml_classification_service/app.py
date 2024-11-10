@@ -44,6 +44,10 @@ def classify_image():
 
     return jsonify({'is_pothole': bool(is_pothole)}), 200
 
+# Add this to each service's app.py
+@app.route('/health')
+def health_check():
+    return jsonify({"status": "healthy"}), 200
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5002)
