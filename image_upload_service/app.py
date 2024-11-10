@@ -17,5 +17,10 @@ def upload_image():
 
     return jsonify({"image_url": image_path}), 201
 
+# Add this to each service's app.py
+@app.route('/health')
+def health_check():
+    return jsonify({"status": "healthy"}), 200
+
 if __name__ == '__main__':
     app.run(port=5001)
