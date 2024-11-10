@@ -11,6 +11,10 @@ def send_notification():
 
     return jsonify({"message": response_message}), 200
 
-
+# Add this to each service's app.py
+@app.route('/health')
+def health_check():
+    return jsonify({"status": "healthy"}), 200
+    
 if __name__ == '__main__':
     app.run(port=5003)
