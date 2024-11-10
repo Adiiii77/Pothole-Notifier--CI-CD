@@ -1,23 +1,33 @@
 {
+  "$schema": "https://railway.app/railway.schema.json",
   "services": [
     {
       "name": "imageservice",
-      "dockerfile": "./image_upload_service/Dockerfile",
-      "context": "./image_upload_service",
+      "nixpacksEnabled": false,
+      "dockerfile": "image_upload_service/Dockerfile",
+      "context": "image_upload_service",
+      "buildCommand": null,
+      "startCommand": null,
       "buildType": "docker",
       "port": 5001
     },
     {
       "name": "mlservice",
-      "dockerfile": "./ml_classification_service/Dockerfile",
-      "context": "./ml_classification_service",
+      "nixpacksEnabled": false,
+      "dockerfile": "ml_classification_service/Dockerfile",
+      "context": "ml_classification_service",
+      "buildCommand": null,
+      "startCommand": null,
       "buildType": "docker",
       "port": 5002
     },
     {
       "name": "notificationservice",
-      "dockerfile": "./notification_service/Dockerfile",
-      "context": "./notification_service",
+      "nixpacksEnabled": false,
+      "dockerfile": "notification_service/Dockerfile",
+      "context": "notification_service",
+      "buildCommand": null,
+      "startCommand": null,
       "buildType": "docker",
       "port": 5003
     }
