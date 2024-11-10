@@ -4,18 +4,21 @@
       "name": "imageservice",
       "dockerfile": "image_upload_service/Dockerfile",
       "context": "image_upload_service",
+      "buildType": "docker",
       "port": 5001
     },
     {
       "name": "mlservice",
       "dockerfile": "ml_classification_service/Dockerfile",
       "context": "ml_classification_service",
+      "buildType": "docker",
       "port": 5002
     },
     {
       "name": "notificationservice",
       "dockerfile": "notification_service/Dockerfile",
       "context": "notification_service",
+      "buildType": "docker",
       "port": 5003
     }
   ]
